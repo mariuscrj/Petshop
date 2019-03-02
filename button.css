@@ -8,6 +8,7 @@
 		border: none;
 		border-radius: 8px;
 		transition: 0.3s;
+		text-align: center;
 	}
 	
 .button:hover {
