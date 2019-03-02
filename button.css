@@ -1,0 +1,16 @@
+.button {
+		color:white;
+		text-transform: uppercase;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 12px;
+		padding: 12px;
+		background-color: #C0D72F;
+		border: none;
+		border-radius: 8px;
+		transition: 0.3s;
+	}
+	
+.button:hover {
+		background-color: #CCCC00;
+		transition: 0.3s;
+}

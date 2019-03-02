@@ -1,0 +1,37 @@
+.hero__container {
+	max-width: 1100px;
+	height: 700px;
+	background: url(images/hero2.jpg);
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.hero__content {
+	width: 400px;
+	padding-top: 36px;
+	padding-left: 80px;
+}
+
+.hero__title {
+	color: white;
+	margin-bottom: 14px;
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 40px;
+}
+
+.hero__description {
+	color: white;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+
+.hero__button {
+	margin-top: 40px;
+	position: absolute;
+	background-color: #006F3C !important;
+}
+
+.hero__button:hover {
+	background-color: #00A84F !important;
+	transition: 0.3s;
+}
