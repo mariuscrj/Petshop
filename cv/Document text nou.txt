@@ -1,0 +1,138 @@
+	<table>
+		<thead>
+			<tr>
+				<th>INFORMA?II<br>PERSONALE</th>
+				<td><strong>Corolea Florin Bogdan</strong></td>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="4"> <img src="poza.jpg" alt="Corolea Bogdan"></td>
+				<td><span class="fa fa-map-marker"></span> România, Sibiu </td>
+			</tr>
+			<tr>
+				<td><span class="fa fa-phone"></span> ***** </td> 
+			</tr>
+			<tr> 
+				<td><span class="fa fa-envelope"></span> bogdancorolea@gmail.com </td> 
+			</tr>
+			<tr> 
+				<td> Sexul Masculin | Data naºterii 12/04/1998 | Naþionalitatea românã </td>
+			</tr>
+			<tr> 
+				<th> EDUCAÞIE ªI<br>FORMARE </th>
+				<td> <hr> </td>
+			</tr>
+			<tr> 
+				<td>2016–Prezent</td>
+				<td>
+					<ul>
+						<li>Universitatea Lucian Blaga - Facultatea de inginerie, Specializarea : Tehnologia Informa?iei ( IT )<a href="http://csac.ulbsibiu.ro/"> CSAC </a> </li>
+					</ul>
+				</td> 
+			</tr>
+			<tr>
+				<td>2012–2016</td>
+				<td>
+					<ul>
+						<li>Liceul Teoretic ,,Dr. M. Ciucã", Sãveni</li>
+					</ul>
+				</td> 				
+			</tr>
+			<tr>
+				<th> COMPETENÞE<br>PERSONALE </th>
+				<td> <hr> </td>
+			</tr>
+			<tr> 
+				<td> Limba maternã</td>
+				<td>
+					<ul>
+						<li>românã </li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Alte limbi strãine cunoscute</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li>Engleza</li>
+					</ul>
+				</td>
+				<td>
+					<table border="1">
+						<thead>
+							<tr> 
+								<td colspan="2"> INTELEGERE </td>
+								<td colspan="2"> VORBIRE </td>
+								<td> SCRIERE </td>
+							</tr>
+							<tr>
+								<td> Ascultare </td>
+								<td> Citire </td>
+								<td> Participare la conversatie </td>
+								<td> Discurs oral </td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td> B2 </td>
+								<td> B2 </td>
+								<td> B2 </td>
+								<td> B2 </td>
+								<td> B2 </td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr> 
+				<td> Competenþe de comunicare </td> 
+				<td> 
+					<ul>
+						<li>Abilitã?i de lucru in echipa dobandite în urma participãrii în activitã?i de voluntariat</li>
+						<li>Abilitã?i de comunicare,creativitate ?i învatare rapidã</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>Competenþe organizaþionale/<br>manageriale </td>
+				<td>
+					<ul>
+						<li>Competen?e de organizare,punctualitate,multitasking</li>
+						<li>Abilitã?i de leadership dobândite pe perioada voluntariatului în cadrul asocia?iei AIESEC</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>Competenþã digitalã</td>
+				<td>
+					<ul>
+						<li>atestat informaticã</li>
+						<li>o bunã stãpânire a programelor de birou( word, powerpoint, excel)</li>
+						<li>bune cuno?tin?e de editare foto ( photoshop )</li>
+						<li>o bunã stãpânire a limbajului de programare:C, C++, JAVA, HTML, CSS</li>
+					</ul>
+				</td>				
+			</tr>
+			<tr>
+				<td> Permis de conducere  </td> 
+				<td>
+					<ul>
+						<li>AM, B1, B</li>
+					</ul>				
+				</td>
+			</tr>
+			<tr>
+				<th>INFORMAÞII<br>SUPLIMENTARE</th>
+				<td><hr></td>
+			</tr>
+			<tr>
+				<td>Proiecte</td>
+				<td>Joc <em>Nu te supara, frate</em> în re?ea utilizând mediul de dezolvare C++ Builder</td>
+			</tr>
+		</tbody>
+	</table>
