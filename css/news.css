@@ -42,9 +42,15 @@
 .news__card {
 	display: flex;
 	flex-direction: column;
-	background-color: #006F3C;
 }
 
 .news__image {
 	display: inline-block;
+}
+
+.news__sub-title {
+	color: white;
+	height: 22px;
+	background-color: #006F3C;
+	text-align: center;
 }

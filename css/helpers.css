@@ -1,0 +1,11 @@
+.h-center {
+	margin: 0 auto;
+}
+
+.h-text-center {
+	text-align: center;
+}
+
+.h-align-center {
+	align-self: center;
+}

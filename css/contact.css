@@ -1,0 +1,26 @@
+.contact__title {
+    color: #006F3C;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+.contact__info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact__adress {
+    margin-bottom: 40px;
+}
+
+.contact__item {
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    color: #006F3C;
+    border-top: 1px solid #EBF2EC;
+    text-align: center;
+}

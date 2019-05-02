@@ -1,0 +1,15 @@
+.login {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #C0D72F;
+    padding: 20px;
+    transform: translateY(-100%);
+    transition: 0.3s;
+}
+
+.is-show {
+    transform: translateY(0%);
+    transition: 0.3s;
+}

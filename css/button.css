@@ -15,3 +15,14 @@
 		background-color: #CCCC00;
 		transition: 0.3s;
 }
+
+.button__contact {
+	color: #2F302E;
+	text-align: center;
+	transition: 0.3s;
+}
+
+.button__contact:hover {
+	color: #00A84F;
+	transition: 0.3s;
+}

@@ -1,0 +1,39 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container--register {
+    width: 210px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.line {
+    margin: 0 auto;
+    width: 100px;
+    border-top: 2px solid #006F3C;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.column {
+    padding-right: 20px;
+}
+
+.is-six {
+    width: 550px;
+}
+
+.is-three {
+    width: 375px;
+}
+
+.title {
+    text-align: center;
+    color: #006F3C;
+}

@@ -1,0 +1,15 @@
+.about__image {
+    max-width: 550px;
+    height: auto;
+}
+
+.about__title {
+    font-family: "Arial Black",Gadget,sans-serif;
+    margin-bottom: 40px;
+    color: #006F3C;
+}
+
+.about__description {
+    font-family: "Times New Roman",Times,serif;
+    margin-bottom: 50px;
+}

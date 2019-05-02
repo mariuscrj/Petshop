@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<link rel="stylesheet" href="header.css">
-		<link rel="stylesheet" href="hero.css">
-		<link rel="stylesheet" href="button.css">
-		<link rel="stylesheet" href="offers.css">
-		<link rel="stylesheet" href="helpers.css">
-		<link rel="stylesheet" href="news.css">
-		<link rel="stylesheet" href="footer.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/defaults.css">
+		<link rel="stylesheet" href="css/hero.css">
+		<link rel="stylesheet" href="css/button.css">
+		<link rel="stylesheet" href="css/offers.css">
+		<link rel="stylesheet" href="css/helpers.css">
+		<link rel="stylesheet" href="css/news.css">
+		<link rel="stylesheet" href="css/footer.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,39 +17,20 @@
     </head>
 <body>
 
-<!-- Navigation bar -->
-	<header class="header">
-		<div class="header__container">
-			<img class="header__logo" src="images/logo.svg" alt="cat-and-dog-logo">
-			<div class="nav">
-				<ul class="nav__content">
-						<li class="nav__item">
-							<a href="#" class="nav__link">home</a>
-						</li>
-						<li class="nav__item">
-								<a href="#" class="nav__link">about</a>
-						</li>
-						<li class="nav__item">
-								<a href="#" class="nav__link">contact</a>
-						</li>
-						<li class="nav__item">
-								<a href="#" class="nav__link">shop</a>
-						</li>
-				</ul>
-			</div>
-			<a href="#" class="header__button">login</a>
-		</div>
-	</header>
-<!-- Navigation bar -->
+<!--header-->
+
+<?php include 'layouts/header.php'; ?>
+
+<!--header-->
 
 <!--Hero section-->
 <section class="hero">
-	<div class="hero__container">
+	<div class="hero__container container">
 		<div class="hero__content">
 			<h1 class="hero__title">Fantastic Animals</h1>
 			<p class="hero__description">We are trying to help every animal and find a lovely 
 				house for it.<br>Help us to help them</p>
-			<a href="#" class="hero__button button">Get in touch with us</a>
+			<a href="contact.php" class="hero__button button">Get in touch with us</a>
 		</div>
 	</div>
 </section>
@@ -74,7 +56,7 @@
 			</div>
 		</div>
 		<h4 class="offers__subtitle">Are you searching for something else?</h4>
-		<a href="#" class="button --shop">go to the shop</a>
+		<a href="shop.php" class="button --shop">go to the shop</a>
 	</div>
 </section>
 <!--Offers section-->
@@ -86,17 +68,17 @@
 		<hr class="news__line">
 		<p class="news__description">Together we can move the world to protect animals</p>
 		<div class="news__content">
-			<a href="#" class="news__card button">
+			<a href="#" class="news__card">
 				<img class="news__image" src="images/rescued-dog.jpg" alt="News">
-				Doggo rescued from bad owners
+				<span class="news__sub-title">Doggo rescued from bad owners</span>
 			</a>
-			<a href="#" class="news__card button">
+			<a href="#" class="news__card">
 				<img class="news__image" src="images/horse.jpg" alt="News">
-				Starving
+				<span class="news__sub-title">Starving</span>
 			</a>
-			<a href="#" class="news__card button">
+			<a href="#" class="news__card">
 				<img class="news__image" src="images/dog-in-water.jpg" alt="News">
-				Let behind
+				<span class="news__sub-title">Let behind</span>
 			</a>
 		</div>
 	</div>
@@ -104,15 +86,7 @@
 <!--News section-->
 
 <!--Footer-->
-<footer class="footer">
-	<div class="footer__container h-center">
-		<img class="footer__image" src="images/logo.svg" alt="dogo-cat-logo">
-		<div class="footer__contact">
-			<h1 class="footer__title">Contact us</h1>
-			<a href="tel:0762835230" class="footer__phone">0762835230</a>
-			<a href="mailto:petshop@gmail.com" class="footer__email">petshop@gmail.com</a>
-		</div>
-	</div>
-</footer>
+<?php include 'layouts/footer.php'; ?>
+<!--Footer-->
 </body>
 </html>

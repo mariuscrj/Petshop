@@ -1,9 +1,7 @@
 .hero__container {
-	max-width: 1100px;
 	height: 700px;
-	background: url(images/hero2.jpg);
+	background: url(/images/hero-homepage.jpg);
 	background-size: cover;
-	margin: 0 auto;
 }
 
 .hero__content {
