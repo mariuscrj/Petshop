@@ -29,17 +29,20 @@ if (isset($_POST['submit'])) {
             else {
                 $row = mysqli_fetch_assoc($result);
                 //De-hasing the password
-                $hashedPwdCheck = password_verify($password, $row['password']);
+                $hasedPwd = password_hash($password, PASSWORD_DEFAULT);
+                $hashedPwdCheck = password_verify($password, $hasedPwd);
                 if ($hashedPwdCheck == false) {
                     echo '<h1>Invalid password</h1>';
                     echo '</br><a href="index.php" class="button">Return to home</a>'; 
                     die();
                 } elseif ($hashedPwdCheck == true) {
                     //Login the user
-                    $_SESSION['id'] = $row['users_id'];
+                    $_SESSION['id'] = $row['user_id'];
                     $_SESSION["username"] = $row['username'];
+                    $_SESSION['password'] = $row['password'];
                     $_SESSION['email'] = $row['email'];
-                    header("Location: ../.php");
+                    echo '<h1>Login successfully</h1>';
+                    echo '</br><a href="index.php" class="button">Return to home</a>';
                     die();
                 }   
             }
