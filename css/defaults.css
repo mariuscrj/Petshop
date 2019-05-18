@@ -9,6 +9,12 @@
     padding-top: 30px;
 }
 
+.container--cart {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
 .line {
     margin: 0 auto;
     width: 100px;
@@ -17,7 +23,7 @@
 
 .columns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 30px;
 }
 
@@ -30,7 +36,8 @@
 }
 
 .is-three {
-    width: 375px;
+    margin-top: 20px;
+    width: 296px;
 }
 
 .title {

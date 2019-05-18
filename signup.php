@@ -13,7 +13,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 else {
 
   // Inserare date
-  $sql = 'INSERT INTO users (username, password, email) VALUES ("' . $username . '", "' . $password . '", "' . $email . '")';
+  $hashPass = password_hash($password, PASSWORD_DEFAULT);
+  $sql = 'INSERT INTO users (username, password, email) VALUES ("' . $username . '", "' . $hashPass . '", "' . $email . '")';
   if (mysqli_query($link, $sql)) {
     echo '<h1>Records inserted successfully.</h1>';
     echo '<a href="index.php" class="button">Return to home</a>';

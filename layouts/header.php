@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <head>
 	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/form.css">
@@ -25,7 +26,17 @@
 				</li>
 			</ul>
 		</div>
-		<a href="#" class="header__button js-login-trigger">login</a>
+		<?php if (isset($_SESSION['username'])) { ?>
+			<div class="header__log">
+				<form method="post" action="logout.php">
+					<button value="submit" name="submit" class="header__button">Log out</button>
+				</form>
+				<a href="cart.php" class="header__button">cart</a>
+			</div>
+		<?php } ?>
+		<?php if (!isset($_SESSION['username'])) { ?>
+			<a href="#" class="header__button js-login-trigger">login</a>
+		<?php } ?>
 	</div>
 </header>
 <div action="#" class="login js-login">

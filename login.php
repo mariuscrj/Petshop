@@ -29,21 +29,26 @@ if (isset($_POST['submit'])) {
             else {
                 $row = mysqli_fetch_assoc($result);
                 //De-hasing the password
-                $hasedPwd = password_hash($password, PASSWORD_DEFAULT);
-                $hashedPwdCheck = password_verify($password, $hasedPwd);
-                if ($hashedPwdCheck == false) {
+                $hashPassCheck = password_verify($password, $row['password']);
+                if ($hashPassCheck == false) {
                     echo '<h1>Invalid password</h1>';
                     echo '</br><a href="index.php" class="button">Return to home</a>'; 
                     die();
-                } elseif ($hashedPwdCheck == true) {
+                } elseif ($hashPassCheck == true) {
                     //Login the user
                     $_SESSION['id'] = $row['user_id'];
                     $_SESSION["username"] = $row['username'];
                     $_SESSION['password'] = $row['password'];
                     $_SESSION['email'] = $row['email'];
-                    echo '<h1>Login successfully</h1>';
-                    echo '</br><a href="index.php" class="button">Return to home</a>';
-                    die();
+                    if($row['admin'] == 1) {
+                        echo '<h1>Login successfully</h1>';
+                        echo '</br><a href="admin.php" class="button">Go to adminstration</a>';
+                    }
+                    else {
+                        echo '<h1>Login successfully</h1>';
+                        echo '</br><a href="shop.php" class="button">Go to the shop</a>';
+                        die();
+                    }
                 }   
             }
         }

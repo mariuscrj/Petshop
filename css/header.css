@@ -66,3 +66,7 @@
 	background-color: #CCCC00;
 	transition: 0.3s;
 }
+
+.header__log {
+	display: flex;
+}

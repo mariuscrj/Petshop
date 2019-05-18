@@ -9,3 +9,16 @@
 .h-align-center {
 	align-self: center;
 }
+
+.h-responsive-image {
+	width: 100%;
+	height: auto;
+}
+
+.h-wrap {
+	flex-wrap: wrap;
+}
+
+.h-full-width {
+	width: 100%;
+}

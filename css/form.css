@@ -2,6 +2,10 @@
     margin-bottom: 10px;
 }
 
+.form-cart {
+    margin: 20px auto;
+}
+
 .form__field {
     margin-bottom: 15px;
     display: flex;

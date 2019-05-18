@@ -1,6 +1,6 @@
 <?php
 // Creaza baza de date
-$sql = 'CREATE DATABASE demo';
+$sql = 'CREATE DATABASE petshop';
 
 if (mysqli_query($link, $sql)) {
   echo 'Database created successfully';

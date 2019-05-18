@@ -19,97 +19,31 @@
 <?php include 'layouts/header.php'; ?>
 <!--header-->
 <section class="shop">
+<?php
+  include 'connect.php';
+	$sql = "SELECT * FROM items";
+	$items = mysqli_query($link, $sql);
+?>
 	<div class="container">
 		<h1 class="shop__title">Animals</h1>
 		<hr class="line">
-		<div class="shop__item">
-			<h2 class="shop__sub-title">Cats</h2>
-			<div class="columns">
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/cat-1.jpeg" alt="cat-1">
-							<a class="button"href="#">Cat 1</a>
-						</div>
-					</div>
-				</div>
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/cat-2.jpeg" alt="cat-2">
-							<a class="button"href="#">Cat 2</a>
-						</div>
-					</div>
-				</div>
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/british-cat.jpg" alt="british-cat">
-							<a class="button"href="#">British cat</a>
-						</div>
-					</div>
-				</div>
+			<div class="columns h-wrap">
+				<?php while ( ($row = mysqli_fetch_array($items))) { ?>
+							<div class="column is-three">
+								<div class="card">
+									<div class="card__item">
+										<?php echo '<img src="data:image/jpeg;base64,'. base64_encode($row['image']) .'" />'; ?>
+										<a class="button" href="#"><?php echo $row['name'] . '-' . $row['price']; ?>$</a>
+										<form method="post" action="cartStore.php">
+											<input type="hidden" name="item_id" value=<?php echo $row['id']; ?>>
+											<button class="button -green h-full-width" value="add_cart" name="addCart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+							</div>
+					<?php } ?>
 			</div>
 		</div>
-				<div class="shop__item">
-			<h2 class="shop__sub-title">Dogs</h2>
-			<div class="columns">
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/husky-siberian.jpg" alt="A-siberian-husky">
-							<a class="button"href="#">Siberian Husky</a>
-						</div>
-					</div>
-				</div>
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/shiba-inu.jpg" alt="A-shiba-inu-doggo">
-							<a class="button"href="#">Shiba inu</a>
-						</div>
-					</div>
-				</div>
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/golden-retriever.jpg" alt="golden-retriever">
-							<a class="button"href="#">Golden Retriever</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-				<div class="shop__item">
-			<h2 class="shop__sub-title">Otters</h2>
-			<div class="columns">
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/otter-1.jpg" alt="otter-1">
-							<a class="button"href="#">Otter 1</a>
-						</div>
-					</div>
-				</div>
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/otter-2.jpg" alt="otter-2">
-							<a class="button"href="#">Otter 2</a>
-						</div>
-					</div>
-				</div>
-				<div class="column is-three">
-					<div class="card">
-						<div class="card__item">
-							<img class="card__image" src="images/otter.jpg" alt="otter">
-							<a class="button"href="#">Otter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </section>
 <!--Footer-->
 <?php include 'layouts/footer.php'; ?>

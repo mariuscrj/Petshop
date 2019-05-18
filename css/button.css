@@ -26,3 +26,11 @@
 	color: #00A84F;
 	transition: 0.3s;
 }
+
+.-green {
+	background-color: #00A84F;
+}
+
+.-green:hover {
+	background-color: #006F3C;
+}
