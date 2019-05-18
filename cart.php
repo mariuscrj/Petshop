@@ -37,6 +37,8 @@
 		<?php } ?>
 		<p class="h-text-center">Total: <?php echo $sum ?>$</p>
 		<form method="post" action="order.php" class="form-cart">
+			<label class="form__label" for="name">Adresa:</label>
+			<input class="form__input" type="text" name="adress" id="adress" placeholder="Adresa">
 			<button value="complete" name="complete" class="h-align-center button">Comanda</button>
 		</form>
 		<a href="shop.php" class="button h-align-center">Go to the shop</a>

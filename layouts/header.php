@@ -30,8 +30,11 @@
 			<div class="header__log">
 				<form method="post" action="logout.php">
 					<button value="submit" name="submit" class="header__button">Log out</button>
-				</form>
-				<a href="cart.php" class="header__button">cart</a>
+				<?php if(isset($_SESSION['admin'])) { ?>
+					<a href="admin.php" class="header__button">admin</a>
+				<?php } else { ?>
+					<a href="cart.php" class="header__button">cart</a>
+				<?php } ?>
 			</div>
 		<?php } ?>
 		<?php if (!isset($_SESSION['username'])) { ?>

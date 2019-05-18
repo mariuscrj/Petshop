@@ -16,7 +16,7 @@
 
 .card__image {
     width: 375px;
-    height: 360px;
+    min-height: 300px;
     border: 1px solid #006F3C;
 }
 

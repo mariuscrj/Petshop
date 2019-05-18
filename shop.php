@@ -32,7 +32,7 @@
 							<div class="column is-three">
 								<div class="card">
 									<div class="card__item">
-										<?php echo '<img src="data:image/jpeg;base64,'. base64_encode($row['image']) .'" />'; ?>
+										<?php echo '<img class="card__image h-responsive-image" src="data:image/jpeg;base64,'. base64_encode($row['image']) .'" />'; ?>
 										<a class="button" href="#"><?php echo $row['name'] . '-' . $row['price']; ?>$</a>
 										<form method="post" action="cartStore.php">
 											<input type="hidden" name="item_id" value=<?php echo $row['id']; ?>>

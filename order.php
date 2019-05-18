@@ -7,7 +7,8 @@
         foreach ($orders as $order) {
             $user_id = $order['user_id'];
             $item_id = $order['items_id'];
-            $sql = 'INSERT INTO orders (user_id, item_id) VALUES ("' . $user_id . '", "' . $item_id . '")';
+            $adress = $_POST['adress'];
+            $sql = 'INSERT INTO orders (user_id, item_id, adress) VALUES ("' . $user_id . '", "' . $item_id . '", "' . $adress . '")';
             if (mysqli_query($link, $sql)) {
             } else {
                 echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);

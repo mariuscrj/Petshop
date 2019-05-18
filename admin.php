@@ -17,6 +17,19 @@
 <?php include 'layouts/header.php'; ?>
 <!--header-->
 <section class="cart">
+	<div class="container">
+		<h1 class="title"> Hello! </h1>
+		<form action="adminStore.php" class="form form-admin" method="post" enctype="multipart/form-data">
+			<label class="form__label" for="image">Select image:</label>
+			<input type="file" name="image" id="image">
+			<label class="form__label" for="name">Product name:</label>
+			<input class="form__input" type="text" name="name" id="name" placeholder="Name of product">
+			<label class="form__label" for="price">Price:</label>
+			<input class="form__input" type="text" name="price" id="price" placeholder="Price">
+			<button name="save" value="save" type="submit" class="button">Save</button>
+		</form>
+	</div>
+
 </section>
 <!--Footer-->
 <?php include 'layouts/footer.php'; ?>

@@ -1,10 +1,11 @@
 <?php
 // Creaza tabela
-$sql = 'CREATE TABLE persons(
+$sql = 'CREATE TABLE users(
   id INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
-  first_name VARCHAR(30),
-  last_name VARCHAR(30),
-  email VARCHAR(70)
+  name VARCHAR(30),
+  email VARCHAR(30),
+  password VARCHAR(70),
+  admin BOOLEAN(1)
 )';
 
 if (mysqli_query($link, $sql)) {
