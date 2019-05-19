@@ -40,6 +40,7 @@ if (isset($_POST['submit'])) {
                     $_SESSION["username"] = $row['username'];
                     $_SESSION['password'] = $row['password'];
                     $_SESSION['email'] = $row['email'];
+                    $_SESSION['admin'] = $row['admin'];
                     if($row['admin'] == 1) {
                         echo '<h1>Login successfully</h1>';
                         echo '</br><a href="admin.php" class="button">Go to adminstration</a>';

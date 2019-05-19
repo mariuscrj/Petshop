@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'connect.php';
     global $link;
     $products = "SELECT * FROM cart";
@@ -14,7 +15,8 @@
                 echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
             }
         }
-        $sql = "DELETE FROM cart ";
+
+        $sql = 'DELETE FROM cart WHERE user_id="'.$_SESSION['id'].'"';
         if(mysqli_query($link, $sql)) {
             echo '<h1>Ordered</h1>';
             echo '</br><a href="index.php" class="button">Return to home</a>';
