@@ -10,12 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PetShop</title>
-    </head>
+</head>
 <body>
 
 <!--header-->
 <?php include 'connect.php'; ?>
 <?php include 'layouts/header.php'; ?>
+<?php 
+	if(	isset($_SESSION['admin'])!=1) {
+			echo '<h1>Acces denied</h1>';
+			header( "refresh:2;url=http://petshop.site/index.php" );
+			die();
+	}
+?>
 <!--header-->
 <section class="admin">
 	<div class="container">

@@ -2,24 +2,34 @@
 include 'connect.php';
 global $link;
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+$password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 $email = $_POST['email'];
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo '<h1>Not a email</h1>';
-    echo '</br><a href="register.php" class="button">Return to register</a>';  
+    header( "refresh:3;url=http://petshop.site/register.php" );
     die();
 }
 else {
-
-  // Inserare date
-  $hashPass = password_hash($password, PASSWORD_DEFAULT);
-  $sql = 'INSERT INTO users (username, password, email) VALUES ("' . $username . '", "' . $hashPass . '", "' . $email . '")';
-  if (mysqli_query($link, $sql)) {
-    echo '<h1>Records inserted successfully.</h1>';
-    echo '<a href="index.php" class="button">Return to home</a>';
+  if(empty($username)) {
+    echo '<h1>Invalid name</h1>';
+    header( "refresh:4;url=http://petshop.site/register.php" );
   } else {
-    echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
+    if(!empty($password)) {
+    // Inserare date
+      $hashPass = password_hash($password, PASSWORD_DEFAULT);
+      $sql = 'INSERT INTO users (username, password, email) VALUES ("' . $username . '", "' . $hashPass . '", "' . $email . '")';
+      if (mysqli_query($link, $sql)) {
+        echo '<h1>Records inserted successfully.</h1>';
+        header( "refresh:3;url=http://petshop.site/index.php" );
+      } else {
+        echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
+      }
+    }
+    else {
+      echo '<h1>Empty password</h1>';
+      header( "refresh:4;url=http://petshop.site/register.php" );
+    }
   }
 
   // Inchidere conexiune

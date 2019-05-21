@@ -8,11 +8,17 @@
         foreach ($orders as $order) {
             $user_id = $order['user_id'];
             $item_id = $order['items_id'];
-            $adress = $_POST['adress'];
-            $sql = 'INSERT INTO orders (user_id, item_id, adress) VALUES ("' . $user_id . '", "' . $item_id . '", "' . $adress . '")';
-            if (mysqli_query($link, $sql)) {
-            } else {
-                echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
+            $adress = filter_var($_POST['adress'], FILTER_SANITIZE_STRING);
+            if(!empty($adress)) {
+                $sql = 'INSERT INTO orders (user_id, item_id, adress) VALUES ("' . $user_id . '", "' . $item_id . '", "' . $adress . '")';
+                if (mysqli_query($link, $sql)) {
+                } else {
+                    echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
+                }
+            }
+            else {
+                echo "<h1>Invalid adress</h1>";
+			    header( "refresh:2;url=http://petshop.site/admin.php" );
             }
         }
 

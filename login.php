@@ -43,11 +43,11 @@ if (isset($_POST['submit'])) {
                     $_SESSION['admin'] = $row['admin'];
                     if($row['admin'] == 1) {
                         echo '<h1>Login successfully</h1>';
-                        echo '</br><a href="admin.php" class="button">Go to adminstration</a>';
+                        header( "refresh:3;url=http://petshop.site/admin.php" );
                     }
                     else {
                         echo '<h1>Login successfully</h1>';
-                        echo '</br><a href="shop.php" class="button">Go to the shop</a>';
+                        header( "refresh:3;url=http://petshop.site/shop.php" );
                         die();
                     }
                 }   
