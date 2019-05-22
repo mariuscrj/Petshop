@@ -9,7 +9,11 @@
 		border-radius: 8px;
 		transition: 0.3s;
 		text-align: center;
-	}
+}
+
+.-no-radius {
+	border-radius: 0;
+}
 	
 .button:hover {
 		background-color: #CCCC00;

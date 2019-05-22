@@ -11,7 +11,7 @@
 }
 
 .h-responsive-image {
-	width: 100%;
+	width: 99%;
 	height: auto;
 }
 
@@ -21,4 +21,8 @@
 
 .h-full-width {
 	width: 100%;
+}
+
+.h-max-width {
+	max-width: 300px;
 }

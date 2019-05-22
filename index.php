@@ -44,15 +44,15 @@
 		<div class="offers__cards"> 
 			<div class="offers__card">
 				<img class="offers__photo" src="images/husky-siberian.jpg" alt="A siberian husky">
-				<a href="#" class="offers__button button">Siberian Husky - 600$</a>
+				<a href="shop.php" class="offers__button button">Siberian Husky - 600$</a>
 			</div>
 			<div class="offers__card">
 					<img class="offers__photo" src="images/british-cat.jpg" alt="A british cat">
-					<a href="#" class="offers__button button">British Short-Hair Cat - 550$</a>
+					<a href="shop.php" class="offers__button button">British Short-Hair Cat - 550$</a>
 			</div>
 			<div class="offers__card">
 					<img class="offers__photo" src="images/otter.jpg" alt="An otter husky">
-					<a href="#" class="offers__button button">Otter - 800$</a>
+					<a href="shop.php" class="offers__button button">Otter - 800$</a>
 			</div>
 		</div>
 		<h4 class="offers__subtitle">Are you searching for something else?</h4>

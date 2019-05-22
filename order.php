@@ -18,17 +18,23 @@
             }
             else {
                 echo "<h1>Invalid adress</h1>";
-			    header( "refresh:2;url=http://petshop.site/admin.php" );
+			    header( "refresh:2;url=http://petshop.site/cart.php" );
             }
         }
 
-        $sql = 'DELETE FROM cart WHERE user_id="'.$_SESSION['id'].'"';
-        if(mysqli_query($link, $sql)) {
-            echo '<h1>Ordered</h1>';
-            echo '</br><a href="index.php" class="button">Return to home</a>';
-        }
-        else {
-            echo "Error,cart full";
+        if(!empty($adress)) {
+
+            $sql = 'DELETE FROM cart WHERE user_id="'.$_SESSION['id'].'"';
+            if(mysqli_query($link, $sql)) {
+                echo '<h1>Ordered</h1>';
+                header( "refresh:2;url=http://petshop.site/index.php" );
+            }
+            else {
+                echo "Error,cart full";
+            }
+        } else {
+            echo "<h1>Invalid adress</h1>";
+            header( "refresh:2;url=http://petshop.site/cart.php" );
         }
     }
     mysqli_close($link);

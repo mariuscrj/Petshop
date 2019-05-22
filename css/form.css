@@ -20,6 +20,7 @@
 
 .form__input {
     min-height: 30px;
+    max-width: 300px;
     padding-left: 10px;
 }
 

@@ -33,10 +33,10 @@
 								<div class="card">
 									<div class="card__item">
 										<?php echo '<img class="card__image h-responsive-image" src="data:image/jpeg;base64,'. base64_encode($row['image']) .'" />'; ?>
-										<a class="button" href="#"><?php echo $row['name'] . '-' . $row['price']; ?>$</a>
+										<a class="button -no-radius" href="#"><?php echo $row['name'] . '-' . $row['price']; ?>$</a>
 										<form method="post" action="cartStore.php">
 											<input type="hidden" name="item_id" value=<?php echo $row['id']; ?>>
-											<button class="button -green h-full-width" value="add_cart" name="addCart">Add to cart</button>
+											<button class="button -green h-full-width -no-radius" value="add_cart" name="addCart">Add to cart</button>
 										</form>
 									</div>
 								</div>

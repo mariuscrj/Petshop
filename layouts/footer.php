@@ -7,4 +7,5 @@
 			<a href="mailto:petshop@gmail.com" class="button__contact">petshop@gmail.com</a>
 		</div>
 	</div>
+	<span class="h-text-center">&copy; Copyright 2019</span>
 </footer>

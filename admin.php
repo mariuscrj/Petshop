@@ -34,7 +34,7 @@
 				<input class="form__input" type="text" name="name" id="name" placeholder="Name of product">
 				<label class="form__label" for="price">Price:</label>
 				<input class="form__input" type="text" name="price" id="price" placeholder="Price">
-				<button name="save" value="save" type="submit" class="button">Save</button>
+				<button name="save" value="save" type="submit" class="button h-max-width">Save</button>
 			</form>
 		<?php
 			$sql = "SELECT * FROM items";
