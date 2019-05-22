@@ -41,6 +41,10 @@
 			<input class="form__input" type="text" name="adress" id="adress" placeholder="Adresa">
 			<button value="complete" name="complete" class="h-align-center button">Comanda</button>
 		</form>
+			<form method="post" action="cartStore.php" class="form h-center">
+				<input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
+				<button class="button h-max-width" value="delete" name="delete">delete</button>
+			</form>
 		<a href="shop.php" class="button h-align-center">Go to the shop</a>
 	</div>
 </section>
